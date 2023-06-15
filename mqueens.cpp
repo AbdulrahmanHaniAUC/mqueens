@@ -68,7 +68,7 @@ void printBoard(const vector<vector<int> >& board) {
 }
 
 void solveNQueens(int N) {
-    vector<vector<int>> board(N, vector<int>(N, 0));
+    vector<vector<int> > board(N, vector<int>(N, 0));
 
     if (solveNQueens(board, 0, N)) {
         cout << "Solution found:" << endl;
