@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool isSafe(vector<vector<int>>& board, int row, int col, int N) {
+bool isSafe(vector<vector<int> >& board, int row, int col, int N) {
     // Check if there is a queen in the same column
     for (int i = 0; i < row; i++) {
         if (board[i][col] == 1) {
@@ -30,7 +30,7 @@ bool isSafe(vector<vector<int>>& board, int row, int col, int N) {
     return true;
 }
 
-bool solveNQueens(vector<vector<int>>& board, int row, int N) {
+bool solveNQueens(vector<vector<int> >& board, int row, int N) {
     if (row == N) {
         // All queens have been successfully placed
         return true;
@@ -54,7 +54,7 @@ bool solveNQueens(vector<vector<int>>& board, int row, int N) {
     return false;
 }
 
-void printBoard(const vector<vector<int>>& board) {
+void printBoard(const vector<vector<int> >& board) {
     for (const auto& row : board) {
         for (int cell : row) {
             if (cell == 1) {
